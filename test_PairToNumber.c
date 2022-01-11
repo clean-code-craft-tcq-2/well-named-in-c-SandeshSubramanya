@@ -2,7 +2,7 @@
 #include <assert.h>
 #include "declarations.h"
 
-int GetPairNumberFromColor(const ColorPair* colorPair) {
+int GetPairNumberFromColorPair(const ColorPair* colorPair) {
     return colorPair->majorColor * numberOfMinorColors +
             colorPair->minorColor + 1;
 }
@@ -15,7 +15,7 @@ void testPairToNumber(
     ColorPair colorPair;
     colorPair.majorColor = major;
     colorPair.minorColor = minor;
-    int pairNumber = GetPairNumberFromColor(&colorPair);
+    int pairNumber = GetPairNumberFromColorPair(&colorPair);
     printf("Got pair number %d\n", pairNumber);
     assert(pairNumber == expectedPairNumber);
 }
