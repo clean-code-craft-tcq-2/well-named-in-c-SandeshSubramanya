@@ -1,6 +1,3 @@
-#ifndef TEST_NUMBERTOPAIR_C
-#define TEST_NUMBERTOPAIR_C
-
 #include <stdio.h>
 #include <assert.h>
 #include "declarations.h"
@@ -32,5 +29,3 @@ void testNumberToPair(int pairNumber,
     assert(colorPair.majorColor == expectedMajor);
     assert(colorPair.minorColor == expectedMinor);
 }
-
-#endif  //TEST_NUMBERTOPAIR_C
