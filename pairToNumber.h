@@ -1,8 +1,11 @@
+#ifndef PAIRTONUMBER_H
+#define PAIRTONUMBER_H
+
 #include <stdio.h>
 #include <assert.h>
 #include "declarations.h"
 
-static int GetPairNumberFromColorPair(const ColorPair* colorPair) {
+int GetPairNumberFromColorPair(const ColorPair* colorPair) {
     return colorPair->majorColor * numberOfMinorColors +
             colorPair->minorColor + 1;
 }
@@ -19,3 +22,5 @@ void testPairToNumber(
     printf("Got pair number %d\n", pairNumber);
     assert(pairNumber == expectedPairNumber);
 }
+
+#endif
