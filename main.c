@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <assert.h>
-#include "declarations.h"
 #include "test_NumberToPair.c"
 #include "test_PairToNumber.c"
 
