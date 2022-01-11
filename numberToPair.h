@@ -5,13 +5,13 @@
 #include <assert.h>
 #include "declarations.h"
 
-static void ColorPairToString(const ColorPair* colorPair, char* buffer) {
+void ColorPairToString(const ColorPair* colorPair, char* buffer) {
     sprintf(buffer, "%s %s",
         MajorColorNames[colorPair->majorColor],
         MinorColorNames[colorPair->minorColor]);
 }
 
-static ColorPair GetColorFromPairNumber(int pairNumber) {
+ColorPair GetColorFromPairNumber(int pairNumber) {
     ColorPair colorPair;
     int zeroBasedPairNumber = pairNumber - 1;
     colorPair.majorColor = 
@@ -21,7 +21,7 @@ static ColorPair GetColorFromPairNumber(int pairNumber) {
     return colorPair;
 }
 
-static void testNumberToPair(int pairNumber,
+void testNumberToPair(int pairNumber,
     enum MajorColor expectedMajor,
     enum MinorColor expectedMinor)
 {
