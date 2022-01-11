@@ -2,7 +2,7 @@
 #include <assert.h>
 #include "declarations.h"
 
-int GetPairNumberFromColorPair(const ColorPair* colorPair) {
+static int GetPairNumberFromColorPair(const ColorPair* colorPair) {
     return colorPair->majorColor * numberOfMinorColors +
             colorPair->minorColor + 1;
 }
