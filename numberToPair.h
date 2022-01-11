@@ -1,3 +1,6 @@
+#ifndef NUMBERTOPAIR_H
+#define NUMBERTOPAIR_H
+
 #include <stdio.h>
 #include <assert.h>
 #include "declarations.h"
@@ -18,7 +21,7 @@ static ColorPair GetColorFromPairNumber(int pairNumber) {
     return colorPair;
 }
 
-void testNumberToPair(int pairNumber,
+static void testNumberToPair(int pairNumber,
     enum MajorColor expectedMajor,
     enum MinorColor expectedMinor)
 {
@@ -29,3 +32,5 @@ void testNumberToPair(int pairNumber,
     assert(colorPair.majorColor == expectedMajor);
     assert(colorPair.minorColor == expectedMinor);
 }
+
+#endif	//NUMBERTOPAIR_H
